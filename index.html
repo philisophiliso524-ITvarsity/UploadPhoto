@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image Using Javascript </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="upload">
+        <div class="photo">
+            <h1>Big Five Animals</h1>
+            <p>Big 5</p>
+            <img src="image/profile.png" id="profile-pic">
+            <label for="input-file">choose image</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+        
+        </div>
+    
+    </div>
+</body>
+<script>
+    let profilePic = document.getElementById("profile-pic");
+    let inputFile = document.getElementById("input-file");
+    
+    inputFile.onchange = function(){
+        profilePic.src = URL.createObjectURL(inputFile.files[0]);
+    }
+</script>
+
+</html>
